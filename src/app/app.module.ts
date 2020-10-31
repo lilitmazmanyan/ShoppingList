@@ -9,11 +9,11 @@ import {BodyComponent} from './body/body.component';
 import {ShoppingListComponent} from './body/shopping-list/shopping-list.component';
 import {RecipeListComponent} from './body/recipe-book/recipe-list/recipe-list.component';
 import {RecipeItemComponent} from './body/recipe-book/recipe-list/recipe-item/recipe-item.component';
-import {RecipeDetailComponent} from './body/recipe-book/recipe-detail/recipe-detail.component';
 import {ShoppingListEditComponent} from './body/shopping-list/shopping-list-edit/shopping-list-edit.component';
-import {recipesComponent} from './body/recipe-book/recipes.component';
-
 import {CommonModule} from '@angular/common';
+import {recipesComponent} from './body/recipe-book/recipes.component';
+import {RecipeDetailComponent} from './body/recipe-book/recipe-detail/recipe-detail.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,15 +24,17 @@ import {CommonModule} from '@angular/common';
     ShoppingListComponent,
     RecipeListComponent,
     RecipeItemComponent,
-    recipesComponent,
     RecipeDetailComponent,
     ShoppingListEditComponent,
+    recipesComponent
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
