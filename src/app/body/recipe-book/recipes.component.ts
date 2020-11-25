@@ -2,18 +2,17 @@ import {Component, OnInit} from '@angular/core';
 import {Recipe} from './recipes.model';
 
 @Component({
-  selector: 'app-recipe-book',
-  templateUrl: './recipes.component.html'
+    selector: 'app-recipe-book',
+    templateUrl: './recipes.component.html'
 })
 
-// tslint:disable-next-line:class-name
-export class recipesComponent implements OnInit {
-  selectedRecipe: Recipe;
+export class RecipesComponent implements OnInit {
+    selectedRecipe: Recipe;
 
-  constructor() {
-  }
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
 }
