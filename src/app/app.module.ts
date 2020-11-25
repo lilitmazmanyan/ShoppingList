@@ -11,7 +11,7 @@ import {RecipeListComponent} from './body/recipe-book/recipe-list/recipe-list.co
 import {RecipeItemComponent} from './body/recipe-book/recipe-list/recipe-item/recipe-item.component';
 import {ShoppingListEditComponent} from './body/shopping-list/shopping-list-edit/shopping-list-edit.component';
 import {CommonModule} from '@angular/common';
-import {recipesComponent} from './body/recipe-book/recipes.component';
+import {RecipesComponent} from './body/recipe-book/recipes.component';
 import {RecipeDetailComponent} from './body/recipe-book/recipe-detail/recipe-detail.component';
 import {FormsModule} from '@angular/forms';
 
@@ -26,7 +26,7 @@ import {FormsModule} from '@angular/forms';
     RecipeItemComponent,
     RecipeDetailComponent,
     ShoppingListEditComponent,
-    recipesComponent
+    RecipesComponent
   ],
 
   imports: [
