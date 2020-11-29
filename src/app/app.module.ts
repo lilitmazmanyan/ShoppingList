@@ -14,6 +14,7 @@ import {CommonModule} from '@angular/common';
 import {RecipesComponent} from './body/recipe-book/recipes.component';
 import {RecipeDetailComponent} from './body/recipe-book/recipe-detail/recipe-detail.component';
 import {FormsModule} from '@angular/forms';
+import {ShoppingService} from './body/shopping-list/shopping.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import {FormsModule} from '@angular/forms';
     FormsModule
 
   ],
-  providers: [],
+  providers: [ShoppingService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
