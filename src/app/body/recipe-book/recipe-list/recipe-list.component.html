@@ -9,7 +9,6 @@
   <div class="col-xs-12">
     <app-recipe-item
       *ngFor="let r of recipes"
-      (onSelectRecipe)="onRecipeSelected(r)"
       [current]='r'></app-recipe-item>
   </div>
 </div>

@@ -1,4 +1,5 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {RecipeService} from '../../recipe.service';
 
 @Component({
   selector: 'app-recipe-item',
@@ -7,10 +8,8 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class RecipeItemComponent implements OnInit {
   @Input() current;
-  // tslint:disable-next-line:no-output-on-prefix
-  @Output() onSelectRecipe = new EventEmitter<void>();
 
-  constructor() {
+  constructor(private rs: RecipeService) {
   }
 
   ngOnInit(): void {
@@ -18,7 +17,7 @@ export class RecipeItemComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   getRecipe() {
-    this.onSelectRecipe.emit();
+    this.rs.recipeSelected.emit(this.current);
   }
 
 }
