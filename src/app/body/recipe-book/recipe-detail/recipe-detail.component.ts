@@ -1,4 +1,5 @@
-import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
+import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {RecipeService} from '../recipe.service';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -8,17 +9,17 @@ import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
 export class RecipeDetailComponent implements OnInit, AfterViewInit {
   @Input() currentRecipeForDetails;
 
-  constructor() {
-
+  constructor(private rc: RecipeService) {
   }
 
-  // tslint:disable-next-line:typedef
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     console.log(this.currentRecipeForDetails);
   }
 
   ngOnInit(): void {
   }
 
-
+  passDataToShoppingList(): void {
+    this.rc.addIngredientsToShoppingList(this.currentRecipeForDetails.ingredients);
+  }
 }
