@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,20 +7,9 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  loadedView = 'recipe';
-  change = false;
+  constructor(private authService: AuthService) {}
 
-  // tslint:disable-next-line:typedef
   ngOnInit() {
-  }
-
-  // tslint:disable-next-line:typedef
-  onNavigate(event) {
-    if (event === this.loadedView) {
-      return;
-    } else {
-      this.loadedView = event;
-    }
-
+    this.authService.autoLogin();
   }
 }

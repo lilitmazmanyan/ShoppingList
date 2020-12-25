@@ -1,14 +1,8 @@
-<app-header (toggle)="onNavigate($event)"></app-header>
+<app-header></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <div *ngIf="loadedView === 'recipe'; then: thenBlock; else:elseBlock"></div>
-      <ng-template #thenBlock>
-        <app-recipe-book></app-recipe-book>
-      </ng-template>
-      <ng-template #elseBlock>
-        <app-shopping-list></app-shopping-list>
-      </ng-template>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
