@@ -24,7 +24,7 @@ export class AuthService {
   user = new BehaviorSubject<User>(null);
   private tokenExpirationTimer: any;
 
-  private static handleError(errorRes: HttpErrorResponse) {
+  private handleError(errorRes: HttpErrorResponse) {
     let errorMessage = 'An unknown error occurred!';
     if (!errorRes.error || !errorRes.error.error) {
       return throwError(errorMessage);
