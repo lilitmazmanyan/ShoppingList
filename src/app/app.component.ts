@@ -1,25 +1,14 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  loadedView = 'recipe';
-  change = false;
+export class AppComponent {
+  loadedFeature = 'recipe';
 
-  // tslint:disable-next-line:typedef
-  ngOnInit() {
-  }
-
-  // tslint:disable-next-line:typedef
-  onNavigate(event) {
-    if (event === this.loadedView) {
-      return;
-    } else {
-      this.loadedView = event;
-    }
-
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
   }
 }
