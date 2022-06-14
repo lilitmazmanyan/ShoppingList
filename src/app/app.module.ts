@@ -9,9 +9,6 @@ import { DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { RoutingModule } from './routing.module';
 import { RecipeService } from './recipes/recipe.service';
-import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
-import { AlertComponent } from './shared/alert/alert.component';
-import { PlaceholderDirective } from './shared/placeholder/placeholder.directive';
 import { RecipesModule } from './recipes/recipes.module';
 import { ShoppingListModule } from './shopping-list/shopping-list.module';
 
@@ -20,9 +17,6 @@ import { ShoppingListModule } from './shopping-list/shopping-list.module';
     AppComponent,
     HeaderComponent,
     DropdownDirective,
-    LoadingSpinnerComponent,
-    AlertComponent,
-    PlaceholderDirective
   ],
   imports: [
     BrowserModule,
@@ -37,10 +31,7 @@ import { ShoppingListModule } from './shopping-list/shopping-list.module';
     ShoppingListService,
     RecipeService,
   ],
-  bootstrap: [AppComponent],
-  entryComponents: [
-    AlertComponent
-  ]
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }

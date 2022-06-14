@@ -6,9 +6,9 @@ import { RecipeService } from '../recipe.service';
 
 @Component({
   selector: 'app-recipe-edit',
-  templateUrl: './recipe-edit.component.html',
+  templateUrl: './recipe-add.component.html',
 })
-export class RecipeEditComponent implements OnInit {
+export class RecipeAddComponent implements OnInit {
   id: number;
   editMode = false;
   recipeForm: FormGroup;
@@ -16,8 +16,7 @@ export class RecipeEditComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private recipeService: RecipeService,
-    private router: Router
-  ) {
+    private router: Router) {
   }
 
   get ingredientsControls() {
