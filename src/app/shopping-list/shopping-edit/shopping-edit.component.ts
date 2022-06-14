@@ -1,9 +1,9 @@
-import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
-import {NgForm} from '@angular/forms';
-import {Subscription} from 'rxjs';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Subscription } from 'rxjs';
 
-import {Ingredient} from '../../shared/ingredient.model';
-import {ShoppingListService} from '../shopping-list.service';
+import { Ingredient } from '../../shared/ingredient.model';
+import { ShoppingListService } from '../shopping-list.service';
 
 @Component({
   selector: 'app-shopping-edit',
@@ -30,7 +30,7 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
           this.slForm.setValue({
             name: this.editedItem.name,
             amount: this.editedItem.amount
-          })
+          });
         }
       );
   }
